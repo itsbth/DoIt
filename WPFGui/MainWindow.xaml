@@ -1,0 +1,50 @@
+﻿<Window x:Class="WPFGui.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:WPFGui"
+    Title="DoItLauncher" Height="64" Width="512"
+    AllowsTransparency="True" WindowStyle="None" ShowInTaskbar="False"
+    Background="Transparent" WindowStartupLocation="CenterScreen"
+    Loaded="Window_Loaded" Closed="Window_Closed">
+    <Window.Resources>
+        <local:FileImageExtractor x:Key="FIE" />
+        <local:StringRightConverter x:Key="SRC" />
+    </Window.Resources>
+    <Window.ContextMenu>
+        <ContextMenu>
+            <MenuItem Header="_Rebuild Catalog" Command="local:MainWindow.RebuildCatalogCommand" />
+            <MenuItem Header="Change _Style" Command="local:MainWindow.ChangeStyleCommand" />
+            <MenuItem Header="_Close" Command="ApplicationCommands.Close" />
+        </ContextMenu>
+    </Window.ContextMenu>
+    <Window.CommandBindings>
+        <CommandBinding Command="ApplicationCommands.Close" CanExecute="CloseCommandBinding_CanExecute" Executed="CloseCommandBinding_Executed" />
+        <CommandBinding Command="local:MainWindow.RebuildCatalogCommand" CanExecute="RebuildCatalogCommandBinding_CanExecute" Executed="RebuildCatalogCommandBinding_Executed" />
+        <CommandBinding Command="local:MainWindow.ChangeStyleCommand" CanExecute="ChangeStyleCommand_CanExecute" Executed="ChangeStyleCommand_Executed" />
+    </Window.CommandBindings>
+    <Grid>
+        <Border Style="{DynamicResource GridStyle}">
+            <StackPanel Orientation="Horizontal" Name="MainArea">
+                <TextBox Name="Search" Text="{Binding SearchString, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"  Style="{DynamicResource SearchBoxStyle}" PreviewKeyDown="SearchTextBox_KeyDown" />
+                <Image Source="{Binding ElementName=HitList, Path=SelectedItem.Path, Converter={StaticResource FIE}}" Width="32" VerticalAlignment="Center" />
+                <TextBlock Style="{DynamicResource HitName}" Text="{Binding ElementName=HitList, Path=SelectedItem.Name}" VerticalAlignment="Center" />
+            </StackPanel>
+        </Border>
+        <Popup Name="Popup" PlacementTarget="{Binding ElementName=MainArea}" Placement="Bottom"
+               StaysOpen="False">
+            <ListView Name="HitList" ItemsSource="{Binding SearchResults}" Style="{DynamicResource HitListStyle}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="{Binding Path, Converter={StaticResource FIE}, IsAsync=True}" Width="32" VerticalAlignment="Center" />
+                            <StackPanel VerticalAlignment="Center" ToolTip="{Binding Score}">
+                                <TextBlock Style="{DynamicResource ListNameStyle}" Text="{Binding Name}" />
+                                <TextBlock Style="{DynamicResource PathText}" Text="{Binding Path, Converter={StaticResource SRC}, ConverterParameter=50}" />
+                            </StackPanel>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Popup>
+    </Grid>
+</Window>

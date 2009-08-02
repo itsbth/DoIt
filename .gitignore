@@ -1,0 +1,12 @@
+*.dll
+*.exe
+*.suo
+*.pdb
+*.user
+# #¤%&/ Windows
+Thumbs.db
+bin
+obj
+publish
+TestResults
+Catalog.xml

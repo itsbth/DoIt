@@ -1,0 +1,65 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchableCatalog", "SearchableCatalog\SearchableCatalog.csproj", "{DA112C7A-0862-4CAA-BC41-E15A3D41705E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoItLib", "DoItLib\DoItLib.csproj", "{A6DEADAB-B7EB-46FA-85EE-0FE162F5FB38}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest", "UnitTest\UnitTest.csproj", "{E5E723D0-DFDF-4F38-A8C1-FE307C9ECD6D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C727E427-2D1E-47FC-958D-F75C78DA6B18}"
+	ProjectSection(SolutionItems) = preProject
+		DoIt.vsmdi = DoIt.vsmdi
+		LocalTestRun.testrunconfig = LocalTestRun.testrunconfig
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchTestApp", "SearchTestApp\SearchTestApp.csproj", "{398A9C0E-EB69-4303-AED5-3F92DC1B7BA2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CatalogGenerator", "CatalogGenerator\CatalogGenerator.csproj", "{BCD3ACC5-7BB4-43EE-A403-91DA6A84D390}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestGUI", "TestGUI\TestGUI.csproj", "{C21CF949-B599-480C-A479-D819222AFA0B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFGui", "WPFGui\WPFGui.csproj", "{90F30004-A590-4FF4-866D-B829B1D2BB57}"
+EndProject
+Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = DoIt.vsmdi
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DA112C7A-0862-4CAA-BC41-E15A3D41705E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA112C7A-0862-4CAA-BC41-E15A3D41705E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA112C7A-0862-4CAA-BC41-E15A3D41705E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA112C7A-0862-4CAA-BC41-E15A3D41705E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6DEADAB-B7EB-46FA-85EE-0FE162F5FB38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6DEADAB-B7EB-46FA-85EE-0FE162F5FB38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6DEADAB-B7EB-46FA-85EE-0FE162F5FB38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6DEADAB-B7EB-46FA-85EE-0FE162F5FB38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5E723D0-DFDF-4F38-A8C1-FE307C9ECD6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5E723D0-DFDF-4F38-A8C1-FE307C9ECD6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5E723D0-DFDF-4F38-A8C1-FE307C9ECD6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5E723D0-DFDF-4F38-A8C1-FE307C9ECD6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{398A9C0E-EB69-4303-AED5-3F92DC1B7BA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{398A9C0E-EB69-4303-AED5-3F92DC1B7BA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{398A9C0E-EB69-4303-AED5-3F92DC1B7BA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{398A9C0E-EB69-4303-AED5-3F92DC1B7BA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCD3ACC5-7BB4-43EE-A403-91DA6A84D390}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCD3ACC5-7BB4-43EE-A403-91DA6A84D390}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCD3ACC5-7BB4-43EE-A403-91DA6A84D390}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCD3ACC5-7BB4-43EE-A403-91DA6A84D390}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C21CF949-B599-480C-A479-D819222AFA0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C21CF949-B599-480C-A479-D819222AFA0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C21CF949-B599-480C-A479-D819222AFA0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C21CF949-B599-480C-A479-D819222AFA0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90F30004-A590-4FF4-866D-B829B1D2BB57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90F30004-A590-4FF4-866D-B829B1D2BB57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90F30004-A590-4FF4-866D-B829B1D2BB57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90F30004-A590-4FF4-866D-B829B1D2BB57}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
